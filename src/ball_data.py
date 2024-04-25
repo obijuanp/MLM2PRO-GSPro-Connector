@@ -362,7 +362,7 @@ class BallData:
             self.total_spin * math.cos(math.radians(self.spin_axis)))
         if self.launch_monitor != LaunchMonitor.TRUGOLF_APOGEE:
             self.side_spin = round(
-                self.total_spin * math.sin(math.radians(self.spin_axis)))
+                self.total_spin * math.sin(math.radians(self.spin_axis / 5)))
 
     def from_mlm2pro_bt(self, data: bytearray) -> None:
         self.new_shot = True
